@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/js" href="scripts.js">
+    
+
+    <title>Javascript Calculator</title>
+</head>
+<body>
+ <div id="calc-contain">
+ <h1 style="text-align: center;" > Standard Calculator </h1>    
+ <div class="calculator" style="text-align: center;" >
+ <input type="text" id="result"/>   <br> <br>
+ <input type="button" value="AC" onclick="clean()"/>
+<input type="button" value="7" onclick="cal('7')"/>
+<input type="button" value="8" onclick="cal('8')"/>
+<input type="button" value="9" onclick="cal('9')"/>
+<br> <br>
+<input type="button" value="4" onclick="cal('4')"/>
+<input type="button" value="5" onclick="cal('5')"/>
+<input type="button" value="6" onclick="cal('6')"/>
+<input type="button" value="/" onclick="cal('/')"/>
+<br> <br>
+<input type="button" value="1" onclick="cal('1')"/>
+<input type="button" value="2" onclick="cal('2')"/>
+<input type="button" value="3" onclick="cal('3')"/>
+<input type="button" value="." onclick="cal('.')"/>
+<br> <br>
+<input type="button" value="+" onclick="cal('+')"/>
+<input type="button" value="-" onclick="cal('-')"/>
+<input type="button" value="0" onclick="cal('0')"/>
+<input type="button" value="*" onclick="cal('*')"/>
+<br> <br>
+<input type="button" value="=" onclick="output()"/>
+
+</div>
+ </div>  
+
+
+</body>
+<script>
+function cal(val){
+
+document.getElementById("result").value+=val;
+}
+
+function output (){
+let x= document.getElementById("result").value;
+let y= eval(x);
+document.getElementById("result").value=y;
+}
+
+function clean (){
+
+document.getElementById("result").value="";
+}
+
+
+
+</script>
+
+
+</html>
